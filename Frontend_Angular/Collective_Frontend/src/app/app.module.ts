@@ -1,10 +1,14 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {UserModule} from "./user/user.module";
 import {TaskModule} from "./task/task.module";
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {CoreModule} from "./core/core.module";
+import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -15,6 +19,11 @@ import {TaskModule} from "./task/task.module";
     AppRoutingModule,
     UserModule,
     TaskModule
+    BrowserAnimationsModule,
+    CoreModule,
+    HttpClientModule,
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
