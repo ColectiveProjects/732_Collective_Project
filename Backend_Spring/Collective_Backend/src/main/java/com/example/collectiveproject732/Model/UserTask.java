@@ -1,10 +1,11 @@
 package com.example.collectiveproject732.Model;
 
-import com.sun.istack.NotNull;
+
 import lombok.Data;
 import net.bytebuddy.utility.nullability.MaybeNull;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 
 @Entity

@@ -1,11 +1,12 @@
 package com.example.collectiveproject732.Model;
 
-import com.sun.istack.NotNull;
+
 
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 @Table(name = "users")
 @Entity

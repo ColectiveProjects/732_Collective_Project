@@ -8,19 +8,15 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin
+@CrossOrigin("localhost:4200")
 @RestController
 @RequestMapping("api/task")
 public class TaskController {
     @Autowired
-    private ITaskService taskService;
+    private TaskService taskService;
 
     @PostMapping("/add")
-    public ResponseEntity<?> saveTask(@RequestBody Task task){
-        try{
-            return new ResponseEntity<>(taskService.addTask(task), HttpStatus.OK);
-        } catch (ServiceException e) {
-            return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
-        }
+    public ResponseEntity<Task> saveTask(@RequestBody Task task){
+        return ResponseEntity.ok(this.taskService.save(task));
     }
 }
